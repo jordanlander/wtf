@@ -515,56 +515,12 @@
 
           <div class="grid lg:grid-cols-2 gap-12">
             <!-- Contact Form -->
-            <div class="bg-gray-700 p-8 rounded-xl">
-              <form class="space-y-6" onsubmit="handleFormSubmit(event)">
-                <div class="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label class="block text-sm font-medium text-gray-300 mb-2"
-                      >Name *</label>
-                    <input
-                      type="text"
-                      required
-                      class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
-                      placeholder="Your Name"
-                    />
-                  </div>
-                  <div>
-                    <label class="block text-sm font-medium text-gray-300 mb-2"
-                      >Phone *</label>
-                    <input
-                      type="tel"
-                      required
-                      class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
-                      placeholder="(814) 555-0123"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-gray-300 mb-2"
-                    >Email *</label>
-                  <input
-                    type="email"
-                    required
-                    class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-gray-300 mb-2"
-                    >Message</label>
-                  <textarea
-                    rows="4"
-                    class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
-                    placeholder="Tell us about your freight needs..."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  class="w-full bg-red-600 hover:bg-red-700 text-white py-4 rounded-lg font-montserrat font-semibold text-lg uppercase tracking-wide transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Your Quote
-                </button>
-              </form>
+            <div class="bg-gray-700 p-4 sm:p-6 md:p-8 rounded-xl">
+              <iframe
+                title="Quote request form"
+                src="https://docs.google.com/forms/d/e/1FAIpQLScqOCsU1HFMsHIhwPO-9V09HK6iDer91lesGFe93zqkalmq-A/viewform?embedded=true"
+                class="w-full h-[1200px] md:h-[1000px] lg:h-[850px] border-0 rounded-xl"
+              >Loading…</iframe>
             </div>
 
             <!-- Contact Information -->
@@ -762,33 +718,6 @@
     </div>
 
     <script>
-      function handleFormSubmit(event) {
-        event.preventDefault();
-
-        // Get form data
-        const formData = new FormData(event.target);
-        const name = event.target.querySelector('input[type="text"]').value;
-        const email = event.target.querySelector('input[type="email"]').value;
-        const phone = event.target.querySelector('input[type="tel"]').value;
-        const message = event.target.querySelector("textarea").value;
-
-        // Show success message
-        alert(
-          `Thank you, ${name}! Your quote request has been received. We'll contact you at ${phone} within 24 hours to discuss your freight needs.`,
-        );
-
-        // Reset form
-        event.target.reset();
-
-        // In a real implementation, this would send data to a server
-        console.log("Quote request submitted:", {
-          name,
-          email,
-          phone,
-          message,
-        });
-      }
-
       // Smooth scrolling for navigation links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
