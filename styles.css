@@ -1,0 +1,47 @@
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+.font-lato {
+  font-family: "Lato", sans-serif;
+}
+.hero-bg {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("hero-bg.svg") center/cover;
+}
+.flag-wave {
+  background: linear-gradient(
+    45deg,
+    #dc2626 0%,
+    #dc2626 33%,
+    #ffffff 33%,
+    #ffffff 66%,
+    #1e40af 66%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+html {
+  scroll-behavior: smooth;
+}
+.sticky-cta {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}

@@ -1,465 +1,750 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiley Trucking Fleet - Dependable Coast-to-Coast Freight Solutions</title>
-    <meta name="description" content="Wiley Trucking Fleet provides dependable, safety-first freight solutions across the U.S. with TWIC-certified drivers and real-time tracking.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Wiley Trucking Fleet - Dependable Coast-to-Coast Freight Solutions
+    </title>
+    <meta
+      name="description"
+      content="Wiley Trucking Fleet provides dependable, safety-first freight solutions across the U.S. with TWIC-certified drivers and real-time tracking."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        .font-montserrat { font-family: 'Montserrat', sans-serif; }
-        .font-lato { font-family: 'Lato', sans-serif; }
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23374151" width="1200" height="600"/><path fill="%23475569" d="M0 300L50 280L100 320L150 290L200 310L250 285L300 305L350 275L400 295L450 270L500 290L550 265L600 285L650 260L700 280L750 255L800 275L850 250L900 270L950 245L1000 265L1050 240L1100 260L1150 235L1200 255V600H0V300Z"/></svg>') center/cover;
-        }
-        .flag-wave {
-            background: linear-gradient(45deg, #dc2626 0%, #dc2626 33%, #ffffff 33%, #ffffff 66%, #1e40af 66%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-        html { scroll-behavior: smooth; }
-        .sticky-cta {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-    </style>
-</head>
-<body class="font-lato bg-gray-50">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="font-lato bg-gray-50">
     <!-- Sticky CTA Button -->
-    <button class="sticky-cta bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-montserrat font-semibold text-sm uppercase tracking-wide shadow-lg transition-all duration-300" onclick="document.getElementById('contact').scrollIntoView()">
-        Get a Quote
+    <button
+      class="sticky-cta bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-montserrat font-semibold text-sm uppercase tracking-wide shadow-lg transition-all duration-300"
+      onclick="document.getElementById('contact').scrollIntoView()"
+    >
+      Get a Quote
     </button>
 
     <!-- Header with Flag Wave -->
     <header class="bg-white shadow-sm">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <svg class="w-12 h-12 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
-                    </svg>
-                    <div>
-                        <h1 class="font-montserrat font-bold text-2xl text-gray-800">Wiley Trucking Fleet</h1>
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M3 3v18l7-3 4 3 7-3V0l-7 3-4-3L3 3z"/>
-                            </svg>
-                            <span class="text-sm text-gray-600 font-medium">Erie, PA</span>
-                        </div>
-                    </div>
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#services" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Services</a>
-                    <a href="#about" class="text-gray-700 hover:text-red-600 font-medium transition-colors">About</a>
-                    <a href="#contact" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Contact</a>
-                </nav>
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <svg
+              class="w-12 h-12 text-red-600"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <use href="icons.svg#icon-truck" />
+            </svg>
+            <div>
+              <h1 class="font-montserrat font-bold text-2xl text-gray-800">
+                Wiley Trucking Fleet
+              </h1>
+              <div class="flex items-center space-x-2">
+                <svg
+                  class="w-4 h-4 text-red-600"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="icons.svg#icon-flag" />
+                </svg>
+                <span class="text-sm text-gray-600 font-medium">Erie, PA</span>
+              </div>
             </div>
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="#services"
+              class="text-gray-700 hover:text-red-600 font-medium transition-colors"
+              >Services</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-red-600 font-medium transition-colors"
+              >About</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-red-600 font-medium transition-colors"
+              >Contact</a
+            >
+          </nav>
         </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg min-h-screen flex items-center justify-center text-white relative">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="font-montserrat font-bold text-5xl md:text-7xl mb-6 leading-tight">
-                Dependable Coast-to-Coast<br>
-                <span class="flag-wave">Freight Solutions</span>
-            </h1>
-            <p class="font-lato text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                Class A CDL | 53' Dry Van | Tanker & Doubles/Triples
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="document.getElementById('contact').scrollIntoView()" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg uppercase tracking-wide transition-all duration-300 transform hover:scale-105">
-                    Get Your Quote
-                </button>
-                <button onclick="document.getElementById('services').scrollIntoView()" class="border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-lg font-montserrat font-semibold text-lg uppercase tracking-wide transition-all duration-300">
-                    Our Services
-                </button>
-            </div>
+    <section
+      class="hero-bg min-h-screen flex items-center justify-center text-white relative"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h1
+          class="font-montserrat font-bold text-5xl md:text-7xl mb-6 leading-tight"
+        >
+          Dependable Coast-to-Coast<br />
+          <span class="flag-wave">Freight Solutions</span>
+        </h1>
+        <p
+          class="font-lato text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed"
+        >
+          Class A CDL | 53' Dry Van | Tanker & Doubles/Triples
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            onclick="document.getElementById('contact').scrollIntoView()"
+            class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-montserrat font-semibold text-lg uppercase tracking-wide transition-all duration-300 transform hover:scale-105"
+          >
+            Get Your Quote
+          </button>
+          <button
+            onclick="document.getElementById('services').scrollIntoView()"
+            class="border-2 border-white text-white hover:bg-white hover:text-gray-800 px-8 py-4 rounded-lg font-montserrat font-semibold text-lg uppercase tracking-wide transition-all duration-300"
+          >
+            Our Services
+          </button>
         </div>
-        
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
-        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <svg
+          class="w-6 h-6 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
+      </div>
     </section>
 
     <!-- Values Section -->
     <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="font-montserrat font-bold text-4xl text-gray-800 mb-4">Our Core Values</h2>
-                <div class="w-24 h-1 bg-red-600 mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center group">
-                    <div class="bg-red-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-100 transition-colors">
-                        <svg class="w-10 h-10 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-montserrat font-semibold text-xl text-gray-800 mb-3">Trustworthy</h3>
-                    <p class="text-gray-600">Reliable partnerships built on integrity and transparency</p>
-                </div>
-                
-                <div class="text-center group">
-                    <div class="bg-blue-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-100 transition-colors">
-                        <svg class="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10.5V11.5C15.4,11.5 16,12.4 16,13V16C16,16.6 15.6,17 15,17H9C8.4,17 8,16.6 8,16V13C8,12.4 8.4,11.5 9,11.5V10.5C9,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.2,8.7 10.2,10.5V11.5H13.8V10.5C13.8,8.7 12.8,8.2 12,8.2Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-montserrat font-semibold text-xl text-gray-800 mb-3">Safety First</h3>
-                    <p class="text-gray-600">DOT-compliant operations with zero-compromise standards</p>
-                </div>
-                
-                <div class="text-center group">
-                    <div class="bg-green-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-100 transition-colors">
-                        <svg class="w-10 h-10 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-montserrat font-semibold text-xl text-gray-800 mb-3">On-Time Performance</h3>
-                    <p class="text-gray-600">Punctual deliveries that keep your business moving</p>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-montserrat font-bold text-4xl text-gray-800 mb-4">
+            Our Core Values
+          </h2>
+          <div class="w-24 h-1 bg-red-600 mx-auto"></div>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center group">
+            <div
+              class="bg-red-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-100 transition-colors"
+            >
+              <svg
+                class="w-10 h-10 text-red-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="font-montserrat font-semibold text-xl text-gray-800 mb-3"
+            >
+              Trustworthy
+            </h3>
+            <p class="text-gray-600">
+              Reliable partnerships built on integrity and transparency
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div
+              class="bg-blue-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-100 transition-colors"
+            >
+              <svg
+                class="w-10 h-10 text-blue-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10.5V11.5C15.4,11.5 16,12.4 16,13V16C16,16.6 15.6,17 15,17H9C8.4,17 8,16.6 8,16V13C8,12.4 8.4,11.5 9,11.5V10.5C9,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.2,8.7 10.2,10.5V11.5H13.8V10.5C13.8,8.7 12.8,8.2 12,8.2Z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="font-montserrat font-semibold text-xl text-gray-800 mb-3"
+            >
+              Safety First
+            </h3>
+            <p class="text-gray-600">
+              DOT-compliant operations with zero-compromise standards
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div
+              class="bg-green-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-100 transition-colors"
+            >
+              <svg
+                class="w-10 h-10 text-green-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="font-montserrat font-semibold text-xl text-gray-800 mb-3"
+            >
+              On-Time Performance
+            </h3>
+            <p class="text-gray-600">
+              Punctual deliveries that keep your business moving
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="font-montserrat font-bold text-4xl text-gray-800 mb-4">Our Services</h2>
-                <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Professional freight solutions tailored to your logistics needs</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg text-center transition-all duration-300 cursor-pointer">
-                    <div class="bg-red-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-montserrat font-semibold text-lg text-gray-800 mb-2">Line Haul</h3>
-                    <p class="text-red-600 font-medium">53′ Dry Van</p>
-                </div>
-                
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg text-center transition-all duration-300 cursor-pointer">
-                    <div class="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-montserrat font-semibold text-lg text-gray-800 mb-2">Tanker &</h3>
-                    <p class="text-blue-600 font-medium">Doubles/Triples</p>
-                </div>
-                
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg text-center transition-all duration-300 cursor-pointer">
-                    <div class="bg-green-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1M10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-montserrat font-semibold text-lg text-gray-800 mb-2">TWIC-Certified</h3>
-                    <p class="text-green-600 font-medium">Drivers</p>
-                </div>
-                
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg text-center transition-all duration-300 cursor-pointer">
-                    <div class="bg-purple-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-montserrat font-semibold text-lg text-gray-800 mb-2">Real-Time Load</h3>
-                    <p class="text-purple-600 font-medium">Tracking</p>
-                </div>
-            </div>
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-montserrat font-bold text-4xl text-gray-800 mb-4">
+            Our Services
+          </h2>
+          <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Professional freight solutions tailored to your logistics needs
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="service-card bg-white p-8 rounded-xl shadow-lg text-center transition-all duration-300 cursor-pointer"
+          >
+            <div
+              class="bg-red-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-red-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="font-montserrat font-semibold text-lg text-gray-800 mb-2"
+            >
+              Line Haul
+            </h3>
+            <p class="text-red-600 font-medium">53′ Dry Van</p>
+          </div>
+
+          <div
+            class="service-card bg-white p-8 rounded-xl shadow-lg text-center transition-all duration-300 cursor-pointer"
+          >
+            <div
+              class="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-blue-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="font-montserrat font-semibold text-lg text-gray-800 mb-2"
+            >
+              Tanker &
+            </h3>
+            <p class="text-blue-600 font-medium">Doubles/Triples</p>
+          </div>
+
+          <div
+            class="service-card bg-white p-8 rounded-xl shadow-lg text-center transition-all duration-300 cursor-pointer"
+          >
+            <div
+              class="bg-green-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-green-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1M10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="font-montserrat font-semibold text-lg text-gray-800 mb-2"
+            >
+              TWIC-Certified
+            </h3>
+            <p class="text-green-600 font-medium">Drivers</p>
+          </div>
+
+          <div
+            class="service-card bg-white p-8 rounded-xl shadow-lg text-center transition-all duration-300 cursor-pointer"
+          >
+            <div
+              class="bg-purple-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-purple-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="font-montserrat font-semibold text-lg text-gray-800 mb-2"
+            >
+              Real-Time Load
+            </h3>
+            <p class="text-purple-600 font-medium">Tracking</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- What to Expect Section -->
     <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="font-montserrat font-bold text-4xl text-gray-800 mb-4">What to Expect</h2>
-                    <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
-                    <p class="text-xl text-gray-600">Professional service standards that exceed expectations</p>
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="font-montserrat font-bold text-4xl text-gray-800 mb-4">
+              What to Expect
+            </h2>
+            <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+            <p class="text-xl text-gray-600">
+              Professional service standards that exceed expectations
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-8 rounded-xl">
+              <div class="flex items-start space-x-4">
+                <div class="bg-red-100 p-3 rounded-full flex-shrink-0">
+                  <svg
+                    class="w-6 h-6 text-red-600"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
+                  </svg>
                 </div>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 p-8 rounded-xl">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-red-100 p-3 rounded-full flex-shrink-0">
-                                <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-montserrat font-semibold text-lg text-gray-800 mb-2">Professional Drivers</h3>
-                                <p class="text-gray-600">DOT-compliant drivers with extensive experience and clean records</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-gray-50 p-8 rounded-xl">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-blue-100 p-3 rounded-full flex-shrink-0">
-                                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-montserrat font-semibold text-lg text-gray-800 mb-2">GPS-Equipped Fleet</h3>
-                                <p class="text-gray-600">New, well-maintained equipment with advanced tracking technology</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-gray-50 p-8 rounded-xl">
-                        <div class="flex items-start space-x-4">
-                            <div class="bg-green-100 p-3 rounded-full flex-shrink-0">
-                                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-montserrat font-semibold text-lg text-gray-800 mb-2">Punctual Service</h3>
-                                <p class="text-gray-600">On-time pickups and deliveries that keep your supply chain moving</p>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                  <h3
+                    class="font-montserrat font-semibold text-lg text-gray-800 mb-2"
+                  >
+                    Professional Drivers
+                  </h3>
+                  <p class="text-gray-600">
+                    DOT-compliant drivers with extensive experience and clean
+                    records
+                  </p>
                 </div>
+              </div>
             </div>
+
+            <div class="bg-gray-50 p-8 rounded-xl">
+              <div class="flex items-start space-x-4">
+                <div class="bg-blue-100 p-3 rounded-full flex-shrink-0">
+                  <svg
+                    class="w-6 h-6 text-blue-600"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    class="font-montserrat font-semibold text-lg text-gray-800 mb-2"
+                  >
+                    GPS-Equipped Fleet
+                  </h3>
+                  <p class="text-gray-600">
+                    New, well-maintained equipment with advanced tracking
+                    technology
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-xl">
+              <div class="flex items-start space-x-4">
+                <div class="bg-green-100 p-3 rounded-full flex-shrink-0">
+                  <svg
+                    class="w-6 h-6 text-green-600"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    class="font-montserrat font-semibold text-lg text-gray-800 mb-2"
+                  >
+                    Punctual Service
+                  </h3>
+                  <p class="text-gray-600">
+                    On-time pickups and deliveries that keep your supply chain
+                    moving
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-gray-800 text-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="font-montserrat font-bold text-4xl mb-4">Let's Move Your Freight</h2>
-                    <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
-                    <p class="text-xl text-gray-300">Get a personalized quote for your shipping needs</p>
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="font-montserrat font-bold text-4xl mb-4">
+              Let's Move Your Freight
+            </h2>
+            <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+            <p class="text-xl text-gray-300">
+              Get a personalized quote for your shipping needs
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div class="bg-gray-700 p-8 rounded-xl">
+              <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-2"
+                      >Name *</label
+                    >
+                    <input
+                      type="text"
+                      required
+                      class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-2"
+                      >Phone *</label
+                    >
+                    <input
+                      type="tel"
+                      required
+                      class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                      placeholder="(814) 555-0123"
+                    />
+                  </div>
                 </div>
-                
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Contact Form -->
-                    <div class="bg-gray-700 p-8 rounded-xl">
-                        <form class="space-y-6" onsubmit="handleFormSubmit(event)">
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-300 mb-2">Name *</label>
-                                    <input type="text" required class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500" placeholder="Your Name">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-300 mb-2">Phone *</label>
-                                    <input type="tel" required class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500" placeholder="(814) 555-0123">
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-300 mb-2">Email *</label>
-                                <input type="email" required class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500" placeholder="your@email.com">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                                <textarea rows="4" class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500" placeholder="Tell us about your freight needs..."></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-4 rounded-lg font-montserrat font-semibold text-lg uppercase tracking-wide transition-all duration-300 transform hover:scale-105">
-                                Get Your Quote
-                            </button>
-                        </form>
-                    </div>
-                    
-                    <!-- Contact Information -->
-                    <div class="space-y-8">
-                        <div>
-                            <h3 class="font-montserrat font-semibold text-2xl mb-6">Get in Touch</h3>
-                            <div class="space-y-6">
-                                <div class="flex items-start space-x-4">
-                                    <div class="bg-red-600 p-3 rounded-full flex-shrink-0">
-                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg mb-1">Address</h4>
-                                        <p class="text-gray-300">5341 Cider Mill Rd<br>Erie, PA 16509</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start space-x-4">
-                                    <div class="bg-blue-600 p-3 rounded-full flex-shrink-0">
-                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg mb-1">Phone</h4>
-                                        <p class="text-gray-300">(814) 731-8870</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start space-x-4">
-                                    <div class="bg-green-600 p-3 rounded-full flex-shrink-0">
-                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg mb-1">Email</h4>
-                                        <p class="text-gray-300">WileyTruckingFleet@icloud.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-gray-700 p-6 rounded-xl">
-                            <h4 class="font-montserrat font-semibold text-lg mb-4">Business Hours</h4>
-                            <div class="space-y-2 text-gray-300">
-                                <div class="flex justify-between">
-                                    <span>Monday - Friday</span>
-                                    <span>6:00 AM - 8:00 PM</span>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span>Saturday</span>
-                                    <span>8:00 AM - 6:00 PM</span>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span>Sunday</span>
-                                    <span>Emergency Only</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-300 mb-2"
+                    >Email *</label
+                  >
+                  <input
+                    type="email"
+                    required
+                    class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                    placeholder="your@email.com"
+                  />
                 </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-300 mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    rows="4"
+                    class="w-full px-4 py-3 bg-gray-600 border border-gray-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                    placeholder="Tell us about your freight needs..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-red-600 hover:bg-red-700 text-white py-4 rounded-lg font-montserrat font-semibold text-lg uppercase tracking-wide transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Your Quote
+                </button>
+              </form>
             </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-8">
+              <div>
+                <h3 class="font-montserrat font-semibold text-2xl mb-6">
+                  Get in Touch
+                </h3>
+                <div class="space-y-6">
+                  <div class="flex items-start space-x-4">
+                    <div class="bg-red-600 p-3 rounded-full flex-shrink-0">
+                      <svg
+                        class="w-6 h-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg mb-1">Address</h4>
+                      <p class="text-gray-300">
+                        5341 Cider Mill Rd<br />Erie, PA 16509
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start space-x-4">
+                    <div class="bg-blue-600 p-3 rounded-full flex-shrink-0">
+                      <svg
+                        class="w-6 h-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg mb-1">Phone</h4>
+                      <p class="text-gray-300">(814) 731-8870</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start space-x-4">
+                    <div class="bg-green-600 p-3 rounded-full flex-shrink-0">
+                      <svg
+                        class="w-6 h-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg mb-1">Email</h4>
+                      <p class="text-gray-300">WileyTruckingFleet@icloud.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-700 p-6 rounded-xl">
+                <h4 class="font-montserrat font-semibold text-lg mb-4">
+                  Business Hours
+                </h4>
+                <div class="space-y-2 text-gray-300">
+                  <div class="flex justify-between">
+                    <span>Monday - Friday</span>
+                    <span>6:00 AM - 8:00 PM</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Saturday</span>
+                    <span>8:00 AM - 6:00 PM</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Sunday</span>
+                    <span>Emergency Only</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="md:col-span-2">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <svg class="w-10 h-10 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/>
-                        </svg>
-                        <div>
-                            <h3 class="font-montserrat font-bold text-xl">Wiley Trucking Fleet</h3>
-                            <p class="text-gray-400 text-sm">Dependable Coast-to-Coast Solutions</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 mb-6 max-w-md">Professional freight transportation services across the United States with a commitment to safety, reliability, and on-time delivery.</p>
-                    <div class="flex space-x-4">
-                        <div class="bg-red-600 p-2 rounded-full">
-                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M3 3v18l7-3 4 3 7-3V0l-7 3-4-3L3 3z"/>
-                            </svg>
-                        </div>
-                        <span class="text-gray-400 text-sm">Proudly American Owned & Operated</span>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="font-montserrat font-semibold text-lg mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
-                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors opacity-50">Careers (Coming Soon)</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-montserrat font-semibold text-lg mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li>53' Dry Van</li>
-                        <li>Tanker Transport</li>
-                        <li>Doubles/Triples</li>
-                        <li>Real-Time Tracking</li>
-                    </ul>
-                </div>
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <div class="flex items-center space-x-3 mb-6">
+              <svg
+                class="w-10 h-10 text-red-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <use href="icons.svg#icon-truck" />
+              </svg>
+              <div>
+                <h3 class="font-montserrat font-bold text-xl">
+                  Wiley Trucking Fleet
+                </h3>
+                <p class="text-gray-400 text-sm">
+                  Dependable Coast-to-Coast Solutions
+                </p>
+              </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Wiley Trucking Fleet. All rights reserved. | DOT Compliant | TWIC Certified</p>
+            <p class="text-gray-400 mb-6 max-w-md">
+              Professional freight transportation services across the United
+              States with a commitment to safety, reliability, and on-time
+              delivery.
+            </p>
+            <div class="flex space-x-4">
+              <div class="bg-red-600 p-2 rounded-full">
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <use href="icons.svg#icon-flag" />
+                </svg>
+              </div>
+              <span class="text-gray-400 text-sm"
+                >Proudly American Owned & Operated</span
+              >
             </div>
+          </div>
+
+          <div>
+            <h4 class="font-montserrat font-semibold text-lg mb-4">
+              Quick Links
+            </h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="#services" class="hover:text-white transition-colors"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="#about" class="hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-white transition-colors opacity-50"
+                  >Careers (Coming Soon)</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-montserrat font-semibold text-lg mb-4">Services</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>53' Dry Van</li>
+              <li>Tanker Transport</li>
+              <li>Doubles/Triples</li>
+              <li>Real-Time Tracking</li>
+            </ul>
+          </div>
         </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>
+            &copy; 2024 Wiley Trucking Fleet. All rights reserved. | DOT
+            Compliant | TWIC Certified
+          </p>
+        </div>
+      </div>
     </footer>
 
     <!-- Hidden sections for future expansion -->
     <div id="careers-section" class="hidden">
-        <!-- Careers content placeholder -->
+      <!-- Careers content placeholder -->
     </div>
-    
+
     <div id="testimonials-section" class="hidden">
-        <!-- Testimonials content placeholder -->
+      <!-- Testimonials content placeholder -->
     </div>
 
     <script>
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(event.target);
-            const name = event.target.querySelector('input[type="text"]').value;
-            const email = event.target.querySelector('input[type="email"]').value;
-            const phone = event.target.querySelector('input[type="tel"]').value;
-            const message = event.target.querySelector('textarea').value;
-            
-            // Show success message
-            alert(`Thank you, ${name}! Your quote request has been received. We'll contact you at ${phone} within 24 hours to discuss your freight needs.`);
-            
-            // Reset form
-            event.target.reset();
-            
-            // In a real implementation, this would send data to a server
-            console.log('Quote request submitted:', { name, email, phone, message });
-        }
+      function handleFormSubmit(event) {
+        event.preventDefault();
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        // Get form data
+        const formData = new FormData(event.target);
+        const name = event.target.querySelector('input[type="text"]').value;
+        const email = event.target.querySelector('input[type="email"]').value;
+        const phone = event.target.querySelector('input[type="tel"]').value;
+        const message = event.target.querySelector("textarea").value;
+
+        // Show success message
+        alert(
+          `Thank you, ${name}! Your quote request has been received. We'll contact you at ${phone} within 24 hours to discuss your freight needs.`,
+        );
+
+        // Reset form
+        event.target.reset();
+
+        // In a real implementation, this would send data to a server
+        console.log("Quote request submitted:", {
+          name,
+          email,
+          phone,
+          message,
+        });
+      }
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
             });
+          }
         });
+      });
 
-        // Add scroll effect to sticky CTA
-        window.addEventListener('scroll', function() {
-            const stickyBtn = document.querySelector('.sticky-cta');
-            if (window.scrollY > 100) {
-                stickyBtn.style.opacity = '1';
-            } else {
-                stickyBtn.style.opacity = '0.8';
-            }
-        });
+      // Add scroll effect to sticky CTA
+      window.addEventListener("scroll", function () {
+        const stickyBtn = document.querySelector(".sticky-cta");
+        if (window.scrollY > 100) {
+          stickyBtn.style.opacity = "1";
+        } else {
+          stickyBtn.style.opacity = "0.8";
+        }
+      });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96aac129f2cd3f27',t:'MTc1NDQ0MzY3NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  </body>
 </html>
