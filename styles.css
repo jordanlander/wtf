@@ -45,3 +45,10 @@ html {
     transform: scale(1.05);
   }
 }
+
+@media (max-width: 768px) {
+  .sticky-cta {
+    top: auto;
+    bottom: 20px;
+  }
+}
