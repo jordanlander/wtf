@@ -52,3 +52,22 @@ html {
     bottom: 20px;
   }
 }
+
+.truck-drive {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  font-size: 2rem;
+  animation: drive 2s linear forwards;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+@keyframes drive {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
