@@ -4,6 +4,12 @@
 .font-lato {
   font-family: "Lato", sans-serif;
 }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #111827;
+}
 .hero-bg {
   background:
     linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
@@ -78,7 +84,10 @@ html {
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  transition: background-color 0.3s, transform 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    transform 0.3s,
+    color 0.3s;
 }
 
 .btn-primary:hover {
@@ -97,7 +106,9 @@ html {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border: 2px solid #dc2626;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .btn-secondary:hover {
