@@ -6,8 +6,8 @@
 }
 .hero-bg {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("hero-bg.svg") center/cover;
+    linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+    url("file_00000000e96861fdae46dd8b1cbea0a0.png") center/cover no-repeat;
 }
 .flag-wave {
   background: linear-gradient(
