@@ -22,19 +22,25 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.service-card {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
 }
 html {
   scroll-behavior: smooth;
 }
 .sticky-cta {
   position: fixed;
-  top: 20px;
+  bottom: calc(env(safe-area-inset-bottom) + 20px);
   right: 20px;
   z-index: 1000;
   animation: pulse 2s infinite;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 @keyframes pulse {
   0%,
@@ -48,8 +54,7 @@ html {
 
 @media (max-width: 768px) {
   .sticky-cta {
-    top: auto;
-    bottom: 20px;
+    bottom: calc(env(safe-area-inset-bottom) + 20px);
   }
 }
 
