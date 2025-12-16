@@ -73,13 +73,21 @@
   </head>
   <body class="font-montserrat font-bold text-gray-900 bg-gray-50">
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <!-- Sticky CTA Button -->
-    <button
-      class="sticky-cta btn-primary"
-      onclick="document.getElementById('contact').scrollIntoView()"
-    >
-      Get a Quote
-    </button>
+    <!-- Sticky CTA Buttons -->
+    <div class="sticky-cta space-y-2">
+      <button
+        class="btn-primary w-full text-center"
+        onclick="document.getElementById('contact').scrollIntoView()"
+      >
+        Get a Quote
+      </button>
+      <a
+        href="tel:+18143152544"
+        class="btn-secondary w-full text-center bg-white text-red-600 border-red-600"
+      >
+        Call Dispatch Now
+      </a>
+    </div>
 
     <!-- Header with Flag Wave -->
     <header class="bg-white shadow-sm">
@@ -111,6 +119,11 @@
               href="#about"
               class="text-gray-900 hover:text-red-600 font-bold transition-colors"
               >About</a
+            >
+            <a
+              href="#results"
+              class="text-gray-900 hover:text-red-600 font-bold transition-colors"
+              >Results</a
             >
             <a
               href="#contact"
@@ -158,6 +171,56 @@
           >
             Schedule a Pickup
           </button>
+          <button
+            onclick="prefillSubcontractRequest()"
+            class="btn-primary"
+          >
+            Book a Subcontractor Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials / Results Section -->
+    <section id="results" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="font-montserrat text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Proven Results for Brokers
+          </h2>
+          <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+          <p class="text-xl text-gray-700 font-bold">
+            Brokers trust our drivers for on-time performance across every lane.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <article class="bg-white p-6 rounded-xl shadow-md h-full">
+            <h3 class="font-montserrat font-bold text-lg text-gray-900 mb-2">
+              Midwest to Northeast Dry Van
+            </h3>
+            <p class="text-gray-800 mb-4">
+              "Booked Erie to Boston twice this month—delivered early both runs and kept us updated every checkpoint."
+            </p>
+            <p class="text-sm text-gray-600 font-bold">97% on-time | Dispatcher: Kelly (Cleveland)</p>
+          </article>
+          <article class="bg-white p-6 rounded-xl shadow-md h-full">
+            <h3 class="font-montserrat font-bold text-lg text-gray-900 mb-2">
+              Southeast Refrigerated Support
+            </h3>
+            <p class="text-gray-800 mb-4">
+              "Power-only drop & hook in Atlanta to Charlotte. Driver checked in early and held the schedule during storms."
+            </p>
+            <p class="text-sm text-gray-600 font-bold">98% on-time | Shipper: Maria (Atlanta)</p>
+          </article>
+          <article class="bg-white p-6 rounded-xl shadow-md h-full">
+            <h3 class="font-montserrat font-bold text-lg text-gray-900 mb-2">
+              Dedicated Midwest Retail
+            </h3>
+            <p class="text-gray-800 mb-4">
+              "Three-week dedicated lane Chicago &rarr; Columbus. Zero claims and proactive ETAs kept the DC happy."
+            </p>
+            <p class="text-sm text-gray-600 font-bold">99% on-time | Broker: Jason (Chicago)</p>
+          </article>
         </div>
       </div>
     </section>
@@ -531,6 +594,12 @@
                   name="_next"
                   value="https://www.wileytrucking.com/thank-you.html"
                 />
+                <input
+                  type="hidden"
+                  id="request-context"
+                  name="request_context"
+                  value="Quote request"
+                />
                 <div>
                   <label for="name" class="block text-sm font-bold mb-1"
                     >Name</label
@@ -566,15 +635,151 @@
                     class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-red-500"
                   />
                 </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      for="origin-zip"
+                      class="block text-sm font-bold mb-1"
+                      >Origin ZIP</label
+                    >
+                    <input
+                      type="text"
+                      inputmode="numeric"
+                      pattern="\d{5}"
+                      id="origin-zip"
+                      name="origin_zip"
+                      required
+                      class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-red-500"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="destination-zip"
+                      class="block text-sm font-bold mb-1"
+                      >Destination ZIP</label
+                    >
+                    <input
+                      type="text"
+                      inputmode="numeric"
+                      pattern="\d{5}"
+                      id="destination-zip"
+                      name="destination_zip"
+                      required
+                      class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-red-500"
+                    />
+                  </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label for="commodity" class="block text-sm font-bold mb-1"
+                      >Commodity</label
+                    >
+                    <input
+                      type="text"
+                      id="commodity"
+                      name="commodity"
+                      required
+                      class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-red-500"
+                    />
+                  </div>
+                  <div>
+                    <label for="service-type" class="block text-sm font-bold mb-1"
+                      >Subcontract / Power-only / Dedicated</label
+                    >
+                    <select
+                      id="service-type"
+                      name="service_type"
+                      required
+                      class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-red-500"
+                    >
+                      <option value="" disabled selected>Select service type</option>
+                      <option value="Subcontract">Subcontract</option>
+                      <option value="Power-only">Power-only</option>
+                      <option value="Dedicated">Dedicated</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label for="weight" class="block text-sm font-bold mb-1"
+                      >Weight (lbs)</label
+                    >
+                    <input
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      id="weight"
+                      name="weight"
+                      required
+                      class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-red-500"
+                    />
+                  </div>
+                  <div>
+                    <label for="pallet-count" class="block text-sm font-bold mb-1"
+                      >Pallet Count</label
+                    >
+                    <input
+                      type="number"
+                      min="0"
+                      step="1"
+                      id="pallet-count"
+                      name="pallet_count"
+                      required
+                      class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-red-500"
+                    />
+                  </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      for="pickup-window"
+                      class="block text-sm font-bold mb-1"
+                      >Pickup Window</label
+                    >
+                    <input
+                      type="datetime-local"
+                      id="pickup-window"
+                      name="pickup_window"
+                      required
+                      class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-red-500"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="delivery-window"
+                      class="block text-sm font-bold mb-1"
+                      >Delivery Window</label
+                    >
+                    <input
+                      type="datetime-local"
+                      id="delivery-window"
+                      name="delivery_window"
+                      required
+                      class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-red-500"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="detention-notes"
+                    class="block text-sm font-bold mb-1"
+                    >Detention / Accessorial Notes</label
+                  >
+                  <textarea
+                    id="detention-notes"
+                    name="detention_notes"
+                    rows="3"
+                    class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-red-500"
+                  ></textarea>
+                </div>
                 <div>
                   <label for="message" class="block text-sm font-bold mb-1"
-                    >Message</label
+                    >Additional Details</label
                   >
                   <textarea
                     id="message"
                     name="message"
                     rows="4"
-                    required
                     class="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-red-500"
                   ></textarea>
                 </div>
@@ -710,6 +915,11 @@
                 >
               </li>
               <li>
+                <a href="#results" class="hover:text-white transition-colors"
+                  >Results</a
+                >
+              </li>
+              <li>
                 <a href="#contact" class="hover:text-white transition-colors"
                   >Contact</a
                 >
@@ -758,10 +968,6 @@
       <!-- Careers content placeholder -->
     </div>
 
-    <div id="testimonials-section" class="hidden">
-      <!-- Testimonials content placeholder -->
-    </div>
-
     <script>
       // Smooth scrolling for navigation links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -776,6 +982,33 @@
           }
         });
       });
+
+      function prefillSubcontractRequest() {
+        const contactSection = document.getElementById("contact");
+        const serviceType = document.getElementById("service-type");
+        const contextField = document.getElementById("request-context");
+        const detailsField = document.getElementById("message");
+
+        if (serviceType) {
+          serviceType.value = "Subcontract";
+          serviceType.dispatchEvent(new Event("change"));
+        }
+
+        if (contextField) {
+          contextField.value = "Subcontract request";
+        }
+
+        if (detailsField && detailsField.value.trim() === "") {
+          detailsField.value = "Subcontract request - need fast capacity";
+        }
+
+        if (contactSection) {
+          contactSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }
 
       // Add scroll effect to sticky CTA
       window.addEventListener("scroll", function () {
