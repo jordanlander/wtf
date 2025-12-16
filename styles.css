@@ -39,13 +39,24 @@ body {
 html {
   scroll-behavior: smooth;
 }
-.sticky-cta {
+.sticky-actions {
   position: fixed;
   bottom: calc(env(safe-area-inset-bottom) + 20px);
   right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   z-index: 1000;
+  align-items: flex-end;
+}
+
+.sticky-cta {
   animation: pulse 2s infinite;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-call {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 @keyframes pulse {
