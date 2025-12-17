@@ -108,6 +108,7 @@ html {
 
 .btn-secondary {
   background: linear-gradient(135deg, #dc2626, #b91c1c);
+  background-color: #dc2626;
   color: #ffffff;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
@@ -119,6 +120,7 @@ html {
   border: 2px solid #991b1b;
   transition:
     background 0.3s,
+    background-color 0.3s,
     color 0.3s,
     border-color 0.3s,
     box-shadow 0.3s,
