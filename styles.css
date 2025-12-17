@@ -107,7 +107,7 @@ html {
 }
 
 .btn-secondary {
-  background-color: transparent;
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
   color: #ffffff;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
@@ -116,14 +116,23 @@ html {
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border: 2px solid #ffffff;
-  transition: background-color 0.3s, color 0.3s;
+  border: 2px solid #991b1b;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s,
+    transform 0.3s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-  background-color: #ffffff;
-  color: #dc2626;
+  background: linear-gradient(135deg, #b91c1c, #7f1d1d);
+  color: #ffffff;
+  border-color: #7f1d1d;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
 }
 
 .btn-primary:focus-visible,
