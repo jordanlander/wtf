@@ -99,17 +99,11 @@
   </head>
   <body class="text-body text-gray-900 bg-gray-50">
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <!-- Sticky CTA Buttons -->
-    <div class="sticky-actions" aria-label="Quick contact actions">
-      <button
-        class="sticky-cta btn-primary"
-        onclick="document.getElementById('contact').scrollIntoView()"
-      >
-        Get a Quote
-      </button>
+    <!-- Mobile-only call to action -->
+    <div class="mobile-call-bar" aria-label="Quick call to dispatch">
       <a
         href="tel:+18147318870"
-        class="sticky-call btn-secondary"
+        class="mobile-call-button"
         aria-label="Call dispatch now at 814-731-8870"
       >
         Call Dispatch (814) 731-8870
@@ -1005,16 +999,6 @@
           contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }
-
-      // Add scroll effect to sticky CTA
-      window.addEventListener("scroll", function () {
-        const stickyBtn = document.querySelector(".sticky-cta");
-        if (window.scrollY > 100) {
-          stickyBtn.style.opacity = "1";
-        } else {
-          stickyBtn.style.opacity = "0.8";
-        }
-      });
 
       // Contact form truck animation
       const contactForm = document.getElementById("contact-form");
